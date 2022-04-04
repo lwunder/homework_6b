@@ -1,0 +1,153 @@
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*********** HEADER ************/
+
+#header-logo {
+  margin: 10px;
+}
+
+#header-logo a {
+  color: black;
+  font-weight: normal;
+}
+
+#header-logo img {
+  float: left;
+  padding-right: 15px;
+}
+
+#header-logo h1 {
+  font-family: 'Open Sans', sans-serif;
+  float: left;
+  font-size: 36px;
+  padding: 12px 0;
+  margin: 0;
+}
+
+nav {
+  clear: both;
+}
+
+nav a.button {
+  padding: 10px 50px;
+  font-weight: bold;
+  border-radius: 0;
+  margin: 0;
+}
+
+/*********** BODY ************/
+body {
+  text-align: center;
+  margin: 0;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: normal;
+  font-family: 'Source Serif Pro', serif;
+}
+
+#container {
+  padding: 5%;
+  width: 60%;
+  margin: auto;
+}
+
+h3 {
+  text-align: center;
+  background-color: #CC002B;
+  padding: 5px;
+  color: white;
+}
+
+ul {
+  text-align: left;
+}
+
+strong {
+  background-color: yellow;
+}
+
+table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+th {
+  font-weight: bold;
+}
+
+th, td {
+  border: 2px solid white;
+}
+
+td a {
+  color: white;
+}
+
+#appt-details th{
+  text-align: right;
+}
+
+#appt-details td{
+  text-align: left;
+}
+
+#appt-details th, td {
+  padding: 3px 5px;
+}
+
+#qr-code {
+  background-color: #E5E5E5;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+#upcoming-table {
+  border: 1px solid black;
+}
+
+.left-aligned {
+  text-align: left;
+}
+
+/*********** BUTTONS ************/
+.button {
+  background-color: #B3B3B3;
+  color: white;
+  padding: 15px 20px;
+  margin: 2px;
+  transition: 0.2s;
+  border: none;
+  border-radius: 4px;
+}
+
+.button:hover {
+  background-color: #8D0016;
+}
+
+.selected {
+  background-color: #CC002B;
+}
+
+#back-button {
+  margin: 100px 0;
+  float: left;
+}
+
+.text-link {
+  color: black;
+  text-decoration: underline;
+  font-weight: bold;
+  transition: 0.1s;
+}
+
+.text-link:hover {
+  color: #CC002B;
+}
