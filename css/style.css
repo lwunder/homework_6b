@@ -130,6 +130,7 @@ td a {
 
 .button:hover {
   background-color: #8D0016;
+  cursor: pointer;
 }
 
 .selected {
@@ -139,6 +140,11 @@ td a {
 #back-button {
   margin: 100px 0;
   float: left;
+}
+
+.delete {
+  padding: 5px 10px;
+  float: right;
 }
 
 .text-link {

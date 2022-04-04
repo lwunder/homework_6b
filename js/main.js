@@ -40,7 +40,8 @@ function saveNewAppt(selected_id) {
 
 // called anytime appointment details needs to be shown
 function displayAppointmentDetails() {
-  appt = JSON.parse(localStorage.getItem("upcoming"))[0];
+  var upcoming = JSON.parse(localStorage.getItem("upcoming"));
+  var appt = upcoming[upcoming.length-1];
   document.getElementById("type").innerHTML = appt.type;
   document.getElementById("date-time").innerHTML = appt.date + " at " + appt.time;
   document.getElementById("location").innerHTML = appt.location;
@@ -50,12 +51,25 @@ function displayAppointmentDetails() {
 // Loads the cart (i.e. upcoming appointments) on Appointments page
 function loadCart() {
   var upcomingAppts = JSON.parse(localStorage.getItem("upcoming"));
+  if (upcomingAppts === null) {
+    upcomingAppts = [];
+  }
   var upcomingTable = document.getElementById("upcoming-listings");
+  upcomingTable.innerHTML = ''; // clear the cart
   var row, appt;
   document.getElementById("num-in-cart").innerHTML = upcomingAppts.length;
   for(let i = 0; i < upcomingAppts.length; i++) {
     row = upcomingTable.insertRow(0);
     appt = upcomingAppts[i];
-    row.insertCell(0).innerHTML = appt.time + ' | ' + appt.date + ' - ' + appt.type;
+    row.insertCell(0).innerHTML = appt.time + ' | ' + appt.date + 
+      ' - ' + appt.type + ' <button class="left-aligned delete button" onclick="cancelAppointment('+i+')">Cancel</button>';
   }
+}
+
+// cancel an appointment on the Upcoming Appointments page and reload the cart
+function cancelAppointment(selected_id) {
+  var upcomingAppts = JSON.parse(localStorage.getItem("upcoming"));
+  upcomingAppts.pop(selected_id);
+  localStorage.setItem("upcoming", JSON.stringify(upcomingAppts));
+  loadCart();
 }
