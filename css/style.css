@@ -85,6 +85,7 @@ th {
 
 th, td {
   border: 2px solid white;
+  height: 50px; /* hard coded height to fit buttons in appointment listings */
 }
 
 td a {
@@ -137,8 +138,9 @@ td a {
   background-color: #CC002B;
 }
 
-#back-button {
-  margin: 100px 0;
+#single-button {
+  margin: 20px 0;
+  clear: both;
   float: left;
 }
 
